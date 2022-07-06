@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +10,11 @@ public class FizzBuzzShould {
     private static final String FIZZ = "Fizz";
     private static final String BUZZ = "Buzz";
     private static final String FIZZ_BUZZ = "FizzBuzz";
+
+    @Test
+    void return_empty_array_when_array_is_empty() {
+        assertEquals(0, fizzBuzz.fizzBuzzArray(new String[0]).length);
+    }
 
     @Test
     void return_null_when_string_array_null() {
