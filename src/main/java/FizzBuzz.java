@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class FizzBuzz {
 
 	public String fizzBuzzString(String str) {
@@ -15,8 +17,13 @@ public class FizzBuzz {
 		}
 	}
 
-	public String[] fizzBuzzArray(String[] strings) {
-		return null;
+	public String[] transformArray(String[] words) {
+		if (words == null)
+			return null;
+
+		return IntStream.range(0, words.length)
+				.mapToObj(index -> fizzBuzzString(words[index]))
+				.toArray(String[]::new);
 	}
 
 }

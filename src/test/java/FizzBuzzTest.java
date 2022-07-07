@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class FizzBuzzShould {
+public class FizzBuzzTest {
 
     private FizzBuzz fizzBuzz = new FizzBuzz();
     private static final String FIZZ = "Fizz";
@@ -13,12 +13,12 @@ public class FizzBuzzShould {
 
     @Test
     void return_empty_array_when_array_is_empty() {
-        assertEquals(0, fizzBuzz.fizzBuzzArray(new String[0]).length);
+        assertEquals(0, fizzBuzz.transformArray(new String[0]).length);
     }
 
     @Test
     void return_null_when_string_array_null() {
-        assertNull(fizzBuzz.fizzBuzzArray(null));
+        assertNull(fizzBuzz.transformArray(null));
     }
 
     // Test the "starts with f" case first - this should pass.
