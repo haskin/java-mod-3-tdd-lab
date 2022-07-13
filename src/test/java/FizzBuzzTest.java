@@ -3,14 +3,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class FizzBuzzTest {
 
-    private FizzBuzz fizzBuzz = new FizzBuzz();
+    private FizzBuzz fizzBuzz;
     private static final String FIZZ = "Fizz";
     private static final String BUZZ = "Buzz";
     private static final String FIZZ_BUZZ = "FizzBuzz";
+
+    @BeforeEach
+    void setup() {
+        fizzBuzz = new FizzBuzz();
+    }
 
     @Test
     void all_possible_fizzbuzz_array_input_parameters() {
